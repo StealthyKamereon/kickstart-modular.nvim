@@ -2,6 +2,12 @@ local function gh(repo) return 'https://github.com/' .. repo end
 
 -- [[ Snippet Engine ]]
 
+vim.pack.add {{
+  src = gh 'rafamadriz/friendly-snippets',
+  config = function()
+    require('luasnip.loaders.from_vscode').lazy_load()
+  end,
+}}
 -- NOTE: You can also specify plugin using a version range for its git tag.
 --  See `:help vim.version.range()` for more info
 vim.pack.add { { src = gh 'L3MON4D3/LuaSnip', version = vim.version.range '2.*' } }

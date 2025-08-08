@@ -3,3 +3,4 @@
 
 require 'custom.keymaps'
 require 'custom.options'
+require 'custom.fix_tab_random_jump'
