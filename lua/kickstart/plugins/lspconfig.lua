@@ -148,6 +148,7 @@ local servers = {
       },
     },
   },
+  nixd = {},
 }
 
 vim.pack.add {
