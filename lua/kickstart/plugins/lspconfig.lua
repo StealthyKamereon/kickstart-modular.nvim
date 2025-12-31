@@ -154,17 +154,17 @@ local servers = {
 vim.pack.add {
   gh 'neovim/nvim-lspconfig',
   gh 'mason-org/mason.nvim',
-  gh 'mason-org/mason-lspconfig.nvim',
-  gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
+  -- gh 'mason-org/mason-lspconfig.nvim',
+  -- gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
 }
 
 -- Automatically install LSPs and related tools to stdpath for Neovim
 require('mason').setup {}
 
 -- Translates between nvim-lspconfig server names and mason.nvim package names (e.g. lua_ls <-> lua-language-server)
-require('mason-lspconfig').setup {
-  automatic_enable = false, -- Change this to true if you want to automatically enable servers that are installed manually (e.g. via :Mason / :MasonInstall)
-}
+-- require('mason-lspconfig').setup {
+--   automatic_enable = false, -- Change this to true if you want to automatically enable servers that are installed manually (e.g. via :Mason / :MasonInstall)
+-- }
 
 -- Ensure the servers and tools above are installed
 --
@@ -178,7 +178,7 @@ vim.list_extend(ensure_installed, {
   -- You can add other tools here that you want Mason to install
 })
 
-require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+-- require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
 for name, server in pairs(servers) do
   vim.lsp.config(name, server)
