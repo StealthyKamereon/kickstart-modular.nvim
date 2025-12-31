@@ -22,6 +22,7 @@ local lsp_enabled = {
       },
     },
   },
+  tinymist = {},
 }
 
 local function try_find_and_load_lsp_config()

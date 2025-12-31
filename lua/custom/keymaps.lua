@@ -28,8 +28,8 @@ vim.keymap.set('', 'T', function()
 end, { remap = true })
 
 -- Projects
-vim.keymap.set('n', '<leader>ph', ':NeovimProjectHistory<Enter>', { desc = 'Open projects history' })
-vim.keymap.set('n', '<leader>pd', ':NeovimProjectDiscover<Enter>', { desc = 'Discover projects' })
+vim.keymap.set('n', '<leader>ph', ':Telescope projects<Enter>', { desc = 'Open projects history' })
+vim.keymap.set('n', '<leader>pd', ':Project<Enter>', { desc = 'Discover projects' })
 
 -- Paste yanked directly
 vim.keymap.set('n', 'gp', '"0p', { desc = 'Past yanked on current line' })
