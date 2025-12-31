@@ -1,6 +1,6 @@
 -- Git keymap
-vim.keymap.set('n', '<leader>gg', ':G<Enter>', { desc = 'Open fugitive window' })
-vim.keymap.set('n', '<leader>gm', ':Merginal<Enter>', { desc = 'Open merginal window' })
+vim.keymap.set({ 'n', 'o' }, '<leader>gg', ':G<Enter>', { desc = 'Open fugitive window' })
+vim.keymap.set({ 'n', 'o' }, '<leader>gm', ':Merginal<Enter>', { desc = 'Open merginal window' })
 
 -- Spider (CamelCaseMotions) keymaps
 vim.keymap.set({ 'n', 'o', 'x' }, '<leader>w', "<cmd>lua require('spider').motion('w')<CR>", { desc = 'Spider-w' })
@@ -28,18 +28,18 @@ vim.keymap.set('', 'T', function()
 end, { remap = true })
 
 -- Projects
-vim.keymap.set('n', '<leader>ph', ':Telescope projects<Enter>', { desc = 'Open projects history' })
-vim.keymap.set('n', '<leader>pd', ':Project<Enter>', { desc = 'Discover projects' })
+vim.keymap.set({ 'n', 'o' }, '<leader>ph', ':Telescope projects<Enter>', { desc = 'Open projects history' })
+vim.keymap.set({ 'n', 'o' }, '<leader>pd', ':Project<Enter>', { desc = 'Discover projects' })
 
 -- Paste yanked directly
-vim.keymap.set('n', 'gp', '"0p', { desc = 'Past yanked on current line' })
-vim.keymap.set('n', 'gP', '"0P', { desc = 'Past yanked on previous line' })
+vim.keymap.set({ 'n', 'o' }, 'gp', '"0p', { desc = 'Past yanked on current line' })
+vim.keymap.set({ 'n', 'o' }, 'gP', '"0P', { desc = 'Past yanked on previous line' })
 
 -- Telescope
-vim.keymap.set('n', '<leader>sb', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set({ 'n', 'o' }, '<leader>sb', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 
 -- Show error under cursor
-vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set({ 'n', 'o' }, '<leader>de', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 
 -- Close all buffers but the current one
-vim.keymap.set('n', '<leader>c', ':%bd|e#<Enter>', { desc = '[C]lose every other buffers' })
+vim.keymap.set({ 'n', 'o' }, '<leader>c', ':%bd|e#<Enter>', { desc = '[C]lose every other buffers' })
