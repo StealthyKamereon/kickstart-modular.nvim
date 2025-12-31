@@ -1,21 +1,30 @@
 return {
-  'coffebar/neovim-project',
-  opts = {
-    projects = require 'project-dirs',
-    picker = {
-      type = 'telescope',
-    },
+  'DrKJeff16/project.nvim',
+  cmd = { -- Lazy-load by commands
+    'Project',
+    'ProjectAdd',
+    'ProjectConfig',
+    'ProjectDelete',
+    'ProjectHistory',
+    'ProjectRecents',
+    'ProjectRoot',
+    'ProjectSession',
   },
-  init = function()
-    -- enable saving the state of plugins in the session
-    vim.opt.sessionoptions:append 'globals' -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
-  end,
   dependencies = {
     { 'nvim-lua/plenary.nvim' },
     -- optional picker
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-    { 'Shatur/neovim-session-manager' },
+    { 'nvim-telescope/telescope.nvim' },
+    { 'ibhagwan/fzf-lua' },
   },
   lazy = false,
-  priority = 100,
+  init = function()
+    require('project').setup {
+      enable_autochdir = false,
+      silent_chdir = true,
+      patterns = {
+        '.git',
+      },
+    }
+    require('telescope').load_extension 'projects'
+  end,
 }

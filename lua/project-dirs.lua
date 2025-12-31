@@ -1,6 +1,4 @@
 return {
-  '~/Desktop/*',
-  '~/Documents/*',
-  '~/.config/nvim*',
-  '~/nixos',
+  '~/Documents/dev/*',
+  '~/AppData/Local/nvim*',
 }
