@@ -27,10 +27,6 @@ vim.keymap.set('', 'T', function()
   hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 }
 end, { remap = true })
 
--- Projects
-vim.keymap.set({ 'n', 'o' }, '<leader>ph', ':Telescope projects<Enter>', { desc = 'Open projects history' })
-vim.keymap.set({ 'n', 'o' }, '<leader>pd', ':Project<Enter>', { desc = 'Discover projects' })
-
 -- Paste yanked directly
 vim.keymap.set({ 'n', 'o' }, 'gp', '"0p', { desc = 'Past yanked on current line' })
 vim.keymap.set({ 'n', 'o' }, 'gP', '"0P', { desc = 'Past yanked on previous line' })
