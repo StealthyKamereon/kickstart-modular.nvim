@@ -4,8 +4,8 @@ vim.pack.add {
   gh 'tenxsoydev/karen-yank.nvim',
 }
 
-require("karen-yank").setup {
+require('karen-yank').setup {
   mappings = {
-    karen = 'y'
-  }
+    karen = 'y',
+  },
 }

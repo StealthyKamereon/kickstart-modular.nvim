@@ -3,6 +3,6 @@ local function gh(repo) return 'https://github.com/' .. repo end
 vim.pack.add {
   gh 'karb94/neoscroll.nvim',
 }
-require("neoscroll").setup {
-      easing_function = 'quadratic',
-    }
+require('neoscroll').setup {
+  easing_function = 'quadratic',
+}
