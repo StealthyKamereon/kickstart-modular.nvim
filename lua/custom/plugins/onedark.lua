@@ -1,12 +1,7 @@
--- Using Lazy
-return {
-  'navarasu/onedark.nvim',
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    require('onedark').setup {
-      style = 'dark',
-    }
-    -- Enable theme
-    require('onedark').load()
-  end,
-}
+local function gh(repo) return 'https://github.com/' .. repo end
+
+vim.pack.add { {
+  src = gh 'navarasu/onedark.nvim',
+}}
+require("onedark").setup( {style = "dark"})
+require("onedark").load()

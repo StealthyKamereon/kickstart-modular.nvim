@@ -1,10 +1,10 @@
-return {
+local function gh(repo) return 'https://github.com/' .. repo end
+
+vim.pack.add {
   {
-    'tpope/vim-fugitive',
-    lazy = false,
+    src = gh 'tpope/vim-fugitive',
   },
   {
-    'idanarye/vim-merginal',
-    lazy = false,
+    src = 'idanarye/vim-merginal',
   },
 }
